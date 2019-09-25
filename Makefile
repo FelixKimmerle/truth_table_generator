@@ -77,10 +77,10 @@ remake: clean all
 clean:
 	rm -f $(RELEXE) $(RELOBJS) $(DBGEXE) $(DBGOBJS) $(RELDIR)/*.o $(DBGDIR)/*.o $(RELDIR)/*.d $(DBGDIR)/*.d $(DEPS)
 run:
-	$(RELEXE) --docroot . --http-address 0.0.0.0 --http-port 9090
+	$(RELEXE) --docroot . --http-address 0.0.0.0 --http-port 80
 
 rund:
-	$(DBGEXE) --docroot . --http-address 192.168.178.29 --http-port 9091
+	$(DBGEXE) --docroot . --http-address 0.0.0.0 --http-port 9090
 
 test:
 	valgrind --undef-value-errors=no -v $(DBGEXE)
