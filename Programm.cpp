@@ -166,6 +166,10 @@ int Programm::Stacksize()
 
 bool Programm::Add()
 {
+    if(m_Data.empty())
+    {
+        return false;
+    }
     bool uebertrag = true;
     if (!m_Data[m_Data.size() - 1])
     {

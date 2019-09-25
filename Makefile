@@ -80,7 +80,7 @@ run:
 	$(RELEXE) --docroot . --http-address 0.0.0.0 --http-port 80
 
 rund:
-	$(DBGEXE) --docroot . --http-address 0.0.0.0 --http-port 9090
+	$(DBGEXE) --docroot . --http-address 0.0.0.0 --http-port 9091
 
 test:
 	valgrind --undef-value-errors=no -v $(DBGEXE)
