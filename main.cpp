@@ -165,23 +165,23 @@ HelloApplication::HelloApplication(const Wt::WEnvironment &env)
         table_->elementAt(10, 0)->addWidget(std::make_unique<WText>("\"1\""));
         table_->elementAt(10, 1)->addWidget(std::make_unique<WText>("Wahr"));
 
-        table_->elementAt(10, 0)->addWidget(std::make_unique<WText>("\"(...)\""));
-        table_->elementAt(10, 1)->addWidget(std::make_unique<WText>("Klammern"));
+        table_->elementAt(11, 0)->addWidget(std::make_unique<WText>("\"(...)\""));
+        table_->elementAt(11, 1)->addWidget(std::make_unique<WText>("Klammern"));
 
-        table_->elementAt(11, 0)->addWidget(std::make_unique<WText>("\",\""));
-        table_->elementAt(11, 1)->addWidget(std::make_unique<WText>("Komma trennt Aussagen. Man kann so viele Aussagen nacheinander haengen wie man will"));
+        table_->elementAt(12, 0)->addWidget(std::make_unique<WText>("\",\""));
+        table_->elementAt(12, 1)->addWidget(std::make_unique<WText>("Komma trennt Aussagen. Man kann so viele Aussagen nacheinander haengen wie man will"));
 
-        table_->elementAt(12, 0)->addWidget(std::make_unique<WText>("\"A...Z\""));
-        table_->elementAt(12, 1)->addWidget(std::make_unique<WText>("Variablen"));
+        table_->elementAt(13, 0)->addWidget(std::make_unique<WText>("\"A...Z\""));
+        table_->elementAt(13, 1)->addWidget(std::make_unique<WText>("Variablen"));
 
-        table_->elementAt(13, 0)->addWidget(std::make_unique<WText>("Beispiel: A|B"));
-        table_->elementAt(13, 1)->addWidget(std::make_unique<WText>("A oder B"));
+        table_->elementAt(14, 0)->addWidget(std::make_unique<WText>("Beispiel: A|B"));
+        table_->elementAt(14, 1)->addWidget(std::make_unique<WText>("A oder B"));
 
-        table_->elementAt(14, 0)->addWidget(std::make_unique<WText>("Beispiel: (A->B)&(B->C),A->C"));
-        table_->elementAt(14, 1)->addWidget(std::make_unique<WText>("\"A impliziert B und B impliziert C\" und \"A impliziert C\""));
+        table_->elementAt(15, 0)->addWidget(std::make_unique<WText>("Beispiel: (A->B)&(B->C),A->C"));
+        table_->elementAt(15, 1)->addWidget(std::make_unique<WText>("\"A impliziert B und B impliziert C\" und \"A impliziert C\""));
 
-        table_->elementAt(15, 0)->addWidget(std::make_unique<WText>("Beispiel: !A&!B,!A,!B"));
-        table_->elementAt(15, 1)->addWidget(std::make_unique<WText>("\"Nicht A und Nicht B\" und \"Nicht A\" und \"Nicht B\" "));
+        table_->elementAt(16, 0)->addWidget(std::make_unique<WText>("Beispiel: !A&!B,!A,!B"));
+        table_->elementAt(16, 1)->addWidget(std::make_unique<WText>("\"Nicht A und Nicht B\" und \"Nicht A\" und \"Nicht B\" "));
 
         hbox->addWidget(std::move(table));
     }
