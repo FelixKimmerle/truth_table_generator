@@ -11,10 +11,6 @@ Programm::Programm(const std::string &source) : m_Lexer(source)
         m_OpCode.push_back(OP_Return);
     } while (m_Lexer.getCurrent().getType() == Token::T_Push);
 
-    for (auto &&i : m_OpCode)
-    {
-        std::cout << (int)i << std::endl;
-    }
 }
 
 Programm::~Programm()
