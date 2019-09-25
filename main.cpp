@@ -74,8 +74,8 @@ void HelloApplication::show()
 
     auto opcode = pr.GetOpCode();
     row = 1;
-    optable_->elementAt(0, 0)->addWidget(std::make_unique<Wt::WText>("ID"));
-    optable_->elementAt(0, 1)->addWidget(std::make_unique<Wt::WText>("OpCode"));
+    optable_->elementAt(0, 1)->addWidget(std::make_unique<Wt::WText>("ID"));
+    optable_->elementAt(0, 0)->addWidget(std::make_unique<Wt::WText>("OpCode"));
     for (unsigned int i = 0; i < opcode.size(); i++)
     {
         optable_->elementAt(row, 1)->addWidget(std::make_unique<Wt::WText>(std::to_string(opcode[i])));
