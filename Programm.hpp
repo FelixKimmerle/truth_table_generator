@@ -52,11 +52,12 @@ private:
     int Stacksize();
     bool available;
     Stack stack;
+    bool error;
 
 public:
     Programm(const std::string &source);
     ~Programm();
-    void Execute();
+    bool Execute();
     bool availible();
     std::vector<bool> next();
     std::vector<char> Variables();

@@ -4,6 +4,7 @@
 #include "Stack.hpp"
 Programm::Programm(const std::string &source) : m_Lexer(source)
 {
+    error = false;
     do
     {
         m_Lexer.getNext();
@@ -294,9 +295,14 @@ std::vector<bool> Programm::next()
     return result;
 }
 
-void Programm::Execute()
+bool Programm::Execute()
 {
+    if(error)
+    {
+        return false;
+    }
     m_Data.resize(m_Indices.size(), false);
     available = true;
     stack.resize(Stacksize());
+    return true;
 }
